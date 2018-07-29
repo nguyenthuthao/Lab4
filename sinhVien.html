@@ -12,19 +12,20 @@
     sinhVien.diemJS = prompt("Nhập vào điểm JS: ");
     sinhVien.diemTB = (sinhVien.diemHTML*10+sinhVien.diemJS*10)/20;
     sinhVien.hienThi = function () {
-        if (sinhVien.diemTB<5){
-            sinhVien.hocLuc = "Yếu";
-        }else if(sinhVien.diemTB<7){
-            sinhVien.hocLuc = "Trung Bình";
-        }else if (sinhVien.diemTB<9){
-            sinhVien.hocLuc = "Giỏi";
+        if (this.diemTB<5){
+            this.hocLuc = "Yếu";
+        }else if(this.diemTB<7){
+            this.hocLuc = "Trung Bình";
+        }else if (this.diemTB<9){
+            this.hocLuc = "Giỏi";
         } else {
-            sinhVien.hocLuc = "Xuất sắc";
+            this.hocLuc = "Xuất sắc";
         }
-    }
-    document.write("Tên là "+" "+sinhVien.hoTen+"<br>");
-    document.write("Điểm trung bình: "+" "+sinhVien.diemTB+"<br>");
-    document.write("Xếp loại: "+sinhVien.hocLuc);
+        document.write("Tên là "+this.hoTen+"<br>");
+        document.write("Điểm trung bình: "+this.diemTB+"<br>");
+        document.write("Xếp loại: "+this.hocLuc);
+    };
 </script>
+<button onclick="sinhVien.hienThi()">Hiển thị</button>
 </body>
 </html>
