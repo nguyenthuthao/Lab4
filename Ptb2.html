@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4</title>
+</head>
+<body>
+<script>
+    var ptb2 = new Object();
+    ptb2.a = prompt("Nhập vào hệ số a: ");
+    if (isNaN(ptb2.a)==false){
+        alert("là số");
+    }else {
+        alert("Không phải là số.Mời nhập lại"+"<br>");
+        ptb2.a = prompt("Nhập vào hệ số a: ");
+    }
+    ptb2.b = prompt("Nhập vào hệ số b: ");
+    if (isNaN(ptb2.b)==false){
+        alert("là số");
+    }else {
+        alert("Không phải là số.Mời nhập lại"+"<br>");
+        ptb2.b = prompt("Nhập vào hệ số b: ");
+    }
+    ptb2.c = prompt("Nhập vào hệ số c: ");
+    if (isNaN(ptb2.c)==false){
+        alert("là số");
+    }else {
+        alert("Không phải là số.Mời nhập lại"+"<br>");
+        ptb2.c = prompt("Nhập vào hệ số c: ");
+    }
+    ptb2.giaiPT = function () {
+        ptb2.delta = Math.pow(ptb2.b,2)-4*ptb2.a*ptb2.c
+        if (ptb2.delta<0){
+            document.write("Phương trình vô nghiệm")
+        } else if (ptb2.delta==0){
+            ptb2.x = -ptb2.b/2*ptb2.a;
+            document.write("Phương trình có nghiệm kép là: "+ ptb2.x);
+        }else {
+            ptb2.x1 = (-ptb2.b+Math.sqrt(ptb2.delta))/(2*ptb2.a);
+            ptb2.x2 = (-ptb2.b-Math.sqrt(ptb2.delta))/(2*ptb2.a);
+            document.write("Phương trình có 2 nghiệm: "+ptb2.x1+" "+"và"+" "+ptb2.x2)
+        }
+    }
+</script>
+<button onclick="ptb2.giaiPT()">Nghiệm của giải phương trình</button>
+</body>
+</html>

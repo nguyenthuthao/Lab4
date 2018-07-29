@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab4</title>
+</head>
+<body>
+<script>
+    var sinhVien = new Object();
+    sinhVien.hoTen = prompt("Nhập họ tên: ");
+    sinhVien.diemHTML = prompt("Nhập vào điểm HTML: ");
+    sinhVien.diemJS = prompt("Nhập vào điểm JS: ");
+    sinhVien.diemTB = (sinhVien.diemHTML*10+sinhVien.diemJS*10)/20;
+    sinhVien.hienThi = function () {
+        if (sinhVien.diemTB<5){
+            sinhVien.hocLuc = "Yếu";
+        }else if(sinhVien.diemTB<7){
+            sinhVien.hocLuc = "Trung Bình";
+        }else if (sinhVien.diemTB<9){
+            sinhVien.hocLuc = "Giỏi";
+        } else {
+            sinhVien.hocLuc = "Xuất sắc";
+        }
+    }
+    document.write("Tên là "+" "+sinhVien.hoTen+"<br>");
+    document.write("Điểm trung bình: "+" "+sinhVien.diemTB+"<br>");
+    document.write("Xếp loại: "+sinhVien.hocLuc);
+</script>
+</body>
+</html>
